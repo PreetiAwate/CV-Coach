@@ -18,7 +18,8 @@ if uploaded_file is not None:
 
     try:
         # Send the file to the backend API
-        response = requests.post("http://127.0.0.1:8000/upload/", files=files)
+        # response = requests.post("http://127.0.0.1:8000/upload/", files=files)
+        response = requests.post("https://cv-coach-backend.onrender.com", files=files)
         if response.status_code == 200:
             # Parse the response
             analysis_results = response.json()
